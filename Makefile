@@ -1,18 +1,18 @@
 OUTPUTDIR=generated
 
 .PHONY: all
-all: gen/index.html gen/index.pdf gen/index.docx gen/index.txt
+all: gen/resume.html gen/resume.pdf gen/resume.docx gen/resume.txt
 
-gen/index.html: index.md
+gen/resume.html: README.md
 	pandoc $< --standalone -o $@
 
-gen/index.pdf: index.md
+gen/resume.pdf: README.md
 	pandoc $< -o $@
 
-gen/index.docx: index.md
+gen/resume.docx: README.md
 	pandoc $< -o $@
 
-gen/index.txt: index.md
+gen/resume.txt: README.md
 	pandoc $< --to plain -o $@
 
 clean:
