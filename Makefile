@@ -1,16 +1,20 @@
-all: index.html index.pdf index.docx index.txt
+OUTPUTDIR=generated
 
-index.html: index.md style.css
-	pandoc --standalone -c style.css --from markdown --to html -o index.html index.md
+.PHONY: all
+all: gen/index.html gen/index.pdf gen/index.docx gen/index.txt
 
-index.pdf: index.html
-	wkhtmltopdf index.html index.pdf
+gen/index.html: index.md
+	pandoc $< --standalone -o $@
 
-index.docx: index.md
-	pandoc --from markdown --to docx -o index.docx index.md
+gen/index.pdf: index.md
+	pandoc $< -o $@
 
-index.txt: index.md
-	pandoc --standalone --smart --from markdown --to plain -o index.txt index.md
+gen/index.docx: index.md
+	pandoc $< -o $@
+
+gen/index.txt: index.md
+	pandoc $< --to plain -o $@
 
 clean:
-	rm -f *.html *.pdf *.docx *.txt
+	rm -f gen/{*.html,*.pdf,*.docx,*.txt}
+

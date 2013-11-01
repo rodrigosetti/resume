@@ -56,7 +56,7 @@ Java
     then successfully handed over to other developers.
 
 Misc
-    Lua, Ada, Bash, Makefile, m4, autotools, cmake… See my github
+    Lua, Ada, Bash, Makefile, m4, autotools, cmake... See my github
     résumé. My kudorank on ohloh is 9, among the top 2% of opensource
     developers.
 
