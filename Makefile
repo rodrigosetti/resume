@@ -1,19 +1,21 @@
 OUTPUTDIR=generated
 
+PANDOC="${HOME}/.cabal/bin/pandoc"
+
 .PHONY: all
 all: gen/resume.html gen/resume.pdf gen/resume.docx gen/resume.txt
 
 gen/resume.html: README.md
-	pandoc $< --standalone -o $@
+	${PANDOC} $< --standalone -o $@
 
 gen/resume.pdf: README.md
-	pandoc $< -o $@
+	${PANDOC} -V geometry:margin=1in $< -o $@
 
 gen/resume.docx: README.md
-	pandoc $< -o $@
+	${PANDOC} $< -o $@
 
 gen/resume.txt: README.md
-	pandoc $< --to plain -o $@
+	${PANDOC} $< --to plain -o $@
 
 clean:
 	rm -f gen/{*.html,*.pdf,*.docx,*.txt}
