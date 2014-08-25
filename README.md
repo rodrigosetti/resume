@@ -57,6 +57,6 @@
 
 ----
 
-> <rodrigosetti@gmail.com> • +1 650 730-0899 • 27 years old, married.
+> <rodrigosetti@gmail.com> • +1 650 730-0899 • 28 years old, married.
 >  San Jose, CA.
 
