@@ -1,12 +1,12 @@
 OUTPUTDIR=generated
 
-PANDOC="${HOME}/.cabal/bin/pandoc"
+PANDOC=${HOME}/.cabal/bin/pandoc --data-dir=data
 
 .PHONY: all
 all: gen/resume.html gen/resume.pdf gen/resume.docx gen/resume.txt
 
 gen/resume.html: README.md
-	${PANDOC} $< --standalone -o $@
+	${PANDOC} $< -t html5 --template=github -o $@
 
 gen/resume.pdf: README.md
 	${PANDOC} -V geometry:margin=1in $< -o $@
