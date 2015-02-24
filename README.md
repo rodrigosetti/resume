@@ -5,7 +5,7 @@
 
 ## Corporate Experience
 
-07/2013 - present
+12/2013 - present
 :   *Sr. Software Engineer at [Yahoo!](http://www.yahoo.com)*, Sunnyvale, CA.
 
     Project: Mobile search web-application

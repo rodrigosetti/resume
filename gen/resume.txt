@@ -7,7 +7,7 @@ Rodrigo Setti
 Corporate Experience
 --------------------
 
-07/2013 - present
+12/2013 - present
     Sr. Software Engineer at Yahoo!, Sunnyvale, CA.
 
     Project: Mobile search web-application
