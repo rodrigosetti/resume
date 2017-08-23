@@ -1,0 +1,174 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage[a4paper, margin=0.6in]{geometry}
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+%\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Rodrigo \textsc{Setti}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+%\section{Personal Data}
+\begin{center}
+\begin{tabular}{cccc}
+		San Jose, CA, USA
+    & +1 650 730-0899
+    & \href{mailto:rodrigosetti@gmail.com}{rodrigosetti@gmail.com}
+    & \href{https://github.com/rodrigosetti}{github.com/rodrigosetti}
+\end{tabular}
+\end{center}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+ \emph{Current} & \textbf{Yahoo} (now part of Oath, a Verizon company), Sunnyvale, CA \\ \textsc{Dec 2013}
+ &\textsc{Sr. Engineering Manager}\\&\footnotesize{
+
+ Lead a team through the development of a chatbot (launched on Kik) using Scala,
+ Akka (clusters, sharding, singletons), and a microservice in Python integrated
+ with Tensorflow and OpenCV for real-time image transformations. Also managed
+ engineers developing applications for iOS, Android, and Web platforms.
+
+ }\\
+ &\textsc{Principal Software Engineer}\\&\footnotesize{
+
+ Lead of a team developing services in Java and Scala for Yahoo Search,
+ and innovation products.
+
+ }\\
+ &\textsc{Sr. Software Engineer}\\&\footnotesize{
+
+ Developed components for Yahoo Search, in PHP (legacy), Node.JS and React.
+
+ }\\
+
+ \multicolumn{2}{c}{} \\
+
+ Jul 2012 - Dec 2013 & \textbf{Evernote}, Redwood City, CA \\
+ &\textsc{Sr. Software Engineer}\\&\footnotesize{
+
+ Part of the \textsc{augmented intelligence} engineering group, which developed
+ several data products for Evernote, involving productionizing data science
+ pipelines and developing user features.
+
+ }\\
+
+ \multicolumn{2}{c}{} \\
+
+ Mar 2011 - Jul 2012 & \textbf{Yahoo}, Sao Paulo, Brazil \\
+ &\textsc{Software Engineer}\\&\footnotesize{
+
+ Worked on Yahoo products for emerging markets, mostly using PHP and Python.
+
+ }
+
+ \\\multicolumn{2}{c}{} \\
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}
+2009 - 2011 & MSc, Electrical Engineering\\
+& \textbf{Universidade Estadual de Campinas (UNICAMP)}, Campinas, Brazil\\
+& Thesis: \textsc{A Hybrid Architecture applied to Reinforcement Learning Problems} \\
+2005 - 2008 & BSc, Computer Science\\
+& \textbf{Universidade Estadual de Londrina (UEL)}, Londrina, Brazil\\
+& Dissertation: \textsc{Emergency and Self-Organization of Agents in Simulated Environments}
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Talks \& Publications}
+\begin{tabular}{rl}
+ Jul. 2017 & \textsc{Why Scala is Great for Agile}\\
+ 				   & Talk in: \textbf{Scala up North 2017}\\
+ Sep. 2016 & \textsc{Generative Art with Racket}\\
+					 & Talk in: \textbf{Sixth RacketCon}\\
+ Dec. 2015 & \textsc{Generative Dreams from Deep Belief Networks}\\
+ 				   & Paper and Talk in: \textbf{The 18th Generative Art Conference}\\
+ Apr. 2011 & \textsc{A Neural Architecture to Address Reinforcement Learning Problems}\\
+ 				   & Paper published in: \textbf{The 2011 International Joint Conference on Neural Networks (IJCNN)}\\
+\end{tabular}
+
+\section{Patents}
+\begin{tabular}{rl}
+ Nov. 2015 & \textsc{Selective Screen Sharing} \textbf{us 14/949,024}\\
+\end{tabular}
+
+\section{Interests}
+
+ On my free time, I continue to enjoy writing code, most recently in Haskell.
+ Mostly developing tools for my own use (and open sourcing it), or developing
+ ``curious'' applications that explore machine learning, artificial life,
+ unusual computer science ideas, and art. I'm also a big reader of science.
+
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}
